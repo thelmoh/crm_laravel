@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('url_tarefa')->nullable();
             $table->unsignedBigInteger('tarefa')->nullable();
             $table->unsignedBigInteger('contrato_id');
-            $table->foreign('contrato_id')->references('contratos')->on('id');
+            $table->foreign('contrato_id')->references('id')->on('contratos');
             $table->timestamps();
             $table->softDeletes();
         });

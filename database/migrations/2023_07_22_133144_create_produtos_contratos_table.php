@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('produtos_contratos', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('contrato_id');
-            $table->foreign('contrato_id')->references('contratos')->on('id');
+            $table->foreign('contrato_id')->references('id')->on('contratos');
             $table->unsignedBigInteger('produto_id');
-            $table->foreign('produto_id')->references('produtos')->on('id');
+            $table->foreign('produto_id')->references('id')->on('produtos');
             $table->integer('quantidade')->default(1);
             $table->decimal('valor',10, 2);
             $table->timestamps();

@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('contratos', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('cliente_id');
-            $table->foreign('cliente_id')->references('clientes')->on('id');
+            $table->foreign('cliente_id')->references('id')->on('clientes');
             $table->date('inicio');
             $table->boolean('ativo')->default(FALSE);
             $table->timestamps();

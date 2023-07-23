@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('telefone');
             $table->string('email');
             $table->unsignedBigInteger('cliente_id');
-            $table->foreign('cliente_id')->references('clientes')->on('id');
+            $table->foreign('cliente_id')->references('id')->on('clientes');
             $table->timestamps();
             $table->softDeletes();
         });
