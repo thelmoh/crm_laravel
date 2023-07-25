@@ -12,7 +12,7 @@ class Cliente extends Model
     protected $table = 'clientes';
 
     public function getId() {
-        return $this->atrributes['id'];
+        return $this->attributes['id'];
     }
 
     public function setId($id) {
@@ -20,11 +20,19 @@ class Cliente extends Model
     }
 
     public function getNome() {
-        return $this->atrributes['nome'];
+        return $this->attributes['nome'];
     }
 
     public function setNome($nome) {
         $this->attributes['nome'] =  $nome;
+    }
+
+    public function getCnpj() {
+        return $this->attributes['cnpj'];
+    }
+
+    public function setCnpj($cnpj) {
+        $this->attributes['cnpj'] =  $cnpj;
     }
 
     public function getEndereco() {
@@ -44,7 +52,7 @@ class Cliente extends Model
     }
 
     public function getBairro() {
-        return $this->atrributes['bairro'];
+        return $this->attributes['bairro'];
     }
     
     public function setBairro($bairro) {
@@ -52,7 +60,7 @@ class Cliente extends Model
     }
 
     public function getComplemento() {
-        return $this->atrributes['complemento'];
+        return $this->attributes['complemento'];
     }
     
     public function setComplemento($complemento) {
@@ -60,7 +68,7 @@ class Cliente extends Model
     }
 
     public function getCidade() {
-        return $this->atrributes['cidade'];
+        return $this->attributes['cidade'];
     }
     
     public function setCidade($cidade) {
@@ -68,7 +76,7 @@ class Cliente extends Model
     }
 
     public function getUf() {
-        return $this->atrributes['uf'];
+        return $this->attributes['uf'];
     }
     
     public function setUf($uf) {
@@ -76,7 +84,7 @@ class Cliente extends Model
     }
 
     public function getTelefone() {
-        return $this->atrributes['telefone'];
+        return $this->attributes['telefone'];
     }
     
     public function setTelefone($telefone) {
@@ -84,7 +92,7 @@ class Cliente extends Model
     }
 
     public function getCelular() {
-        return $this->atrributes['celular'];
+        return $this->attributes['celular'];
     }
     
     public function setCelular($celular) {
@@ -92,7 +100,7 @@ class Cliente extends Model
     }
 
     public function getEmail() {
-        return $this->atrributes['email'];
+        return $this->attributes['email'];
     }
     
     public function setEmail($email) {
@@ -100,7 +108,7 @@ class Cliente extends Model
     }
 
     public function getResponsavel() {
-        return $this->atrributes['responsavel'];
+        return $this->attributes['responsavel'];
     }
     
     public function setResponsavel($responsavel) {
@@ -108,7 +116,7 @@ class Cliente extends Model
     }
 
     public function getAtivo() {
-        return $this->atrributes['ativo'];
+        return $this->attributes['ativo'];
     }
     
     public function setAtivo($ativo) {
@@ -116,7 +124,7 @@ class Cliente extends Model
     }
 
     public function getCreatedAt() {
-        return $this->atrributes['created_at'];
+        return $this->attributes['created_at'];
     }
     
     public function setCreatedAt($created_at) {
@@ -124,7 +132,7 @@ class Cliente extends Model
     }
 
     public function getUpdatedAt() {
-        return $this->atrributes['updated_at'];
+        return $this->attributes['updated_at'];
     }
     
     public function setUpdatedAt($updated_at) {
@@ -132,7 +140,7 @@ class Cliente extends Model
     }
 
     public function getDeletedAt() {
-        return $this->atrributes['deleted_at'];
+        return $this->attributes['deleted_at'];
     }
     
     public function setDeletedAt($deleted_at) {
