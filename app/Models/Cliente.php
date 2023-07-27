@@ -83,6 +83,14 @@ class Cliente extends Model
         $this->attributes['uf'] = $uf;
     }
 
+    public function getCep() {
+        return $this->attributes['cep'];
+    }
+    
+    public function setCep($cep) {
+        $this->attributes['cep'] = $cep;
+    }
+
     public function getTelefone() {
         return $this->attributes['telefone'];
     }

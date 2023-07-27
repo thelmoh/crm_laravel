@@ -2,7 +2,7 @@
 @section('titulo','Listagem de Clientes')
 @section('conteudo')
 <div class="row d-flex flex-row-reverse">
-    <a href="#" class="btn btn-primary ">Novo</a>
+    <a href="{{ route('clientes.novo') }}" class="btn btn-primary ">Novo</a>
 </div>
 <table class="table table-hover table-sm text-nowrap">
     <thead>
@@ -27,13 +27,19 @@
                     <span class="badge bg-danger">Inativo</span>
                     @endif
                 </td>
-                <td class="d-flex flex-row">
-                    <button type="button" class="btn btn-primary btn-sm col-3 mr-1">
-                        <i class="fa fa-pen"></i>
-                    </button>
-                    <button type="button" class="btn btn-danger btn-sm col-3">
-                        <i class="fa fa-eraser"></i>
-                    </button>
+                <td>
+                    <div class="d-grid gap-2 d-md-flex ">
+                        <button type="button" class="btn btn-primary btn-sm mr-1">
+                            <a href="{{ route('clientes.editar', ['id' => $cliente->getId()]) }}" class="link-light text-reset"><i class="fa fa-pen"></i></a>
+                        </button>
+                        <form action="{{ route('clientes.apagar', ['id' => $cliente->getId()]) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger btn-sm">
+                                <i class="fa fa-eraser"></i>
+                            </button>
+                        </form>
+                    </div>
                 </td>
             </tr>
         @endforeach
