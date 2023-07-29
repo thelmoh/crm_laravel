@@ -9,3 +9,10 @@ Route::post('/clientes', 'App\Http\Controllers\ClienteController@store')->name('
 Route::get('/clientes/{id}/editar', 'App\Http\Controllers\ClienteController@edit')->name('clientes.editar');
 Route::put('/clientes/{id}/update', 'App\Http\Controllers\ClienteController@update')->name('clientes.update');
 Route::delete('/clientes/{id}/delete', 'App\Http\Controllers\ClienteController@destroy')->name('clientes.apagar');
+
+Route::get('/produtos', 'App\Http\Controllers\ProdutoController@index')->name('produtos.index');
+Route::get('/produtos/novo', 'App\Http\Controllers\ProdutoController@create')->name('produtos.novo');
+Route::post('/produtos', 'App\Http\Controllers\ProdutoController@store')->name('produtos.store');
+Route::get('/produtos/{id}/editar', 'App\Http\Controllers\ProdutoController@edit')->name('produtos.editar');
+Route::put('/produtos/{id}/update', 'App\Http\Controllers\ProdutoController@update')->name('produtos.update');
+Route::delete('/produtos/{id}/delete', 'App\Http\Controllers\ProdutoController@destroy')->name('produtos.apagar');

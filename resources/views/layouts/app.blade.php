@@ -44,7 +44,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('clientes.index') }}" class="nav-link">
                     <i class="nav-icon fas fa-th"></i>
                     <p>Clientes</p>
                 </a>
@@ -56,7 +56,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('produtos.index') }}" class="nav-link">
                     <i class="nav-icon fas fa-th"></i>
                     <p>Produtos</p>
                 </a>
@@ -119,6 +119,7 @@
 <script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+<script src="{{ asset('plugins/jquery.maskMoney.js') }}"></script>
 
 @hasSection('javascript')
   @yield('javascript')

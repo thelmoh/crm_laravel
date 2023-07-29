@@ -155,5 +155,4 @@ class Cliente extends Model
         $this->attributes['deleted_at'] = $deleted_at;
     }
 
-
 }
