@@ -18,6 +18,10 @@ class Contrato extends Model
         $this->attributes['id'] = $id;
     }
 
+    public function getInicioBR() {
+        return date("d/m/Y",strtotime($this->attributes['inicio']));
+    }
+
     public function getInicio() {
         return $this->attributes['inicio'];
     }

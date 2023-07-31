@@ -35,10 +35,13 @@
                         <form action="{{ route('clientes.apagar', ['id' => $cliente->getId()]) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm">
+                            <button type="submit" class="btn btn-danger btn-sm mr-1">
                                 <i class="fa fa-eraser"></i>
                             </button>
                         </form>
+                        <button type="button" class="btn btn-primary btn-sm mr-1">
+                            <a href="{{ route('contratos.index', ['clienteId' => $cliente->getId()]) }}" class="link-light text-reset"><i class="fa fa-list"></i></a>
+                        </button>
                     </div>
                 </td>
             </tr>

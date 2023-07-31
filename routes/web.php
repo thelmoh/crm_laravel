@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () { return view('layouts.app'); })->name('index');
+
 Route::get('/clientes', 'App\Http\Controllers\ClienteController@index')->name('clientes.index');
 Route::get('/clientes/novo', 'App\Http\Controllers\ClienteController@create')->name('clientes.novo');
 Route::post('/clientes', 'App\Http\Controllers\ClienteController@store')->name('clientes.store');
@@ -16,3 +17,10 @@ Route::post('/produtos', 'App\Http\Controllers\ProdutoController@store')->name('
 Route::get('/produtos/{id}/editar', 'App\Http\Controllers\ProdutoController@edit')->name('produtos.editar');
 Route::put('/produtos/{id}/update', 'App\Http\Controllers\ProdutoController@update')->name('produtos.update');
 Route::delete('/produtos/{id}/delete', 'App\Http\Controllers\ProdutoController@destroy')->name('produtos.apagar');
+
+Route::get('/contratos/{clienteId}', 'App\Http\Controllers\ContratoController@index')->name('contratos.index');
+Route::get('/contratos/{clienteId}/novo', 'App\Http\Controllers\ContratoController@create')->name('contratos.novo');
+Route::post('/contratos', 'App\Http\Controllers\ContratoController@store')->name('contratos.store');
+Route::get('/contratos/{id}/editar', 'App\Http\Controllers\ContratoController@edit')->name('contratos.editar');
+Route::put('/contratos/{id}/update', 'App\Http\Controllers\ContratoController@update')->name('contratos.update');
+Route::delete('/contratos/{id}/delete', 'App\Http\Controllers\ContratoController@destroy')->name('contratos.apagar');
