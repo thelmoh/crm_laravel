@@ -42,6 +42,9 @@
                         <button type="button" class="btn btn-primary btn-sm mr-1">
                             <a href="{{ route('contratos.index', ['clienteId' => $cliente->getId()]) }}" class="link-light text-reset"><i class="fa fa-list"></i></a>
                         </button>
+                        <button type="button" class="btn btn-primary btn-sm mr-1">
+                            <a href="{{ route('contatos.index', ['clienteId' => $cliente->getId()]) }}" class="link-light text-reset"><i class="fa fa-list"></i></a>
+                        </button>
                     </div>
                 </td>
             </tr>

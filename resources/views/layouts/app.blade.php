@@ -45,19 +45,13 @@
                with font-awesome or any other icon font library -->
             <li class="nav-item">
                 <a href="{{ route('clientes.index') }}" class="nav-link">
-                    <i class="nav-icon fas fa-th"></i>
+                    <i class="nav-icon fas fa-users"></i>
                     <p>Clientes</p>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
-                    <i class="nav-icon fas fa-th"></i>
-                    <p>Contratos</p>
-                </a>
-            </li>
-            <li class="nav-item">
                 <a href="{{ route('produtos.index') }}" class="nav-link">
-                    <i class="nav-icon fas fa-th"></i>
+                    <i class="nav-icon fas fa-product-hunt"></i>
                     <p>Produtos</p>
                 </a>
             </li>

@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Contrato extends Model
+class Contato extends Model
 {
     use HasFactory;
-    protected $table = 'contratos';
+    protected $table = 'contatos';
 
     public function getId() {
         return $this->attributes['id'];
@@ -18,24 +18,28 @@ class Contrato extends Model
         $this->attributes['id'] = $id;
     }
 
-    public function getInicioBR() {
-        return date("d/m/Y",strtotime($this->attributes['inicio']));
+    public function getNome() {
+        return $this->attributes['nome'];
     }
 
-    public function getInicio() {
-        return $this->attributes['inicio'];
+    public function setNome($nome) {
+        $this->attributes['nome'] = $nome;
     }
 
-    public function setInicio($inicio) {
-        $this->attributes['inicio'] = $inicio;
+    public function getTelefone() {
+        return $this->attributes['telefone'];
     }
 
-    public function getAtivo() {
-        return $this->attributes['ativo'];
+    public function setTelefone($telefone) {
+        $this->attributes['telefone'] = $telefone;
     }
 
-    public function setAtivo($ativo) {
-        $this->attributes['ativo'] = $ativo;
+    public function getEmail() {
+        return $this->attributes['email'];
+    }
+
+    public function setEmail($email) {
+        $this->attributes['email'] = $email;
     }
 
     public function getClienteId() {
@@ -73,8 +77,5 @@ class Contrato extends Model
     public function cliente() {
         return $this->belongsTo(Cliente::class, 'cliente_id', 'id');
     }
-
-    public function observacoes() {
-        return $this->hasMany(Observacao::class, 'contrato_id', 'id');
-    }
+    
 }

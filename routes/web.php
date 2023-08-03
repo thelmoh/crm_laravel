@@ -24,3 +24,10 @@ Route::post('/contratos', 'App\Http\Controllers\ContratoController@store')->name
 Route::get('/contratos/{id}/editar', 'App\Http\Controllers\ContratoController@edit')->name('contratos.editar');
 Route::put('/contratos/{id}/update', 'App\Http\Controllers\ContratoController@update')->name('contratos.update');
 Route::delete('/contratos/{id}/delete', 'App\Http\Controllers\ContratoController@destroy')->name('contratos.apagar');
+
+Route::get('/contatos/{clienteId}', 'App\Http\Controllers\ContatoController@index')->name('contatos.index');
+Route::get('/contatos/{clienteId}/novo', 'App\Http\Controllers\ContatoController@create')->name('contatos.novo');
+Route::post('/contatos', 'App\Http\Controllers\ContatoController@store')->name('contatos.store');
+Route::get('/contatos/{id}/editar', 'App\Http\Controllers\ContatoController@edit')->name('contatos.editar');
+Route::put('/contatos/{id}/update', 'App\Http\Controllers\ContatoController@update')->name('contatos.update');
+Route::delete('/contatos/{id}/delete', 'App\Http\Controllers\ContatoController@destroy')->name('contatos.apagar');

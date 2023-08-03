@@ -160,4 +160,8 @@ class Cliente extends Model
         return $this->hasMany(Contrato::class, 'cliente_id', 'id');
     }
 
+    public function contatos() {
+        return $this->hasMany(Contato::class, 'cliente_id', 'id');
+    }
+
 }
