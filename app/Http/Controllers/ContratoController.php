@@ -40,6 +40,7 @@ class ContratoController extends Controller
         $contrato = new Contrato();
 
         $contrato->setInicio(date('Y-m-d', strtotime($request->input('inicio'))));
+        $contrato->setDescricao($request->input('descricao'));
         $contrato->setClienteId($request->input('cliente_id'));
         $contrato->setAtivo('1');
        
@@ -78,6 +79,7 @@ class ContratoController extends Controller
     {
         $contrato = Contrato::findOrFail($id);
         $contrato->setInicio($request->input('inicio'));
+        $contrato->seDescricao($request->input('descricao'));
         $contrato->setClienteId($request->input('cliente_id'));
 
         $contrato->save();

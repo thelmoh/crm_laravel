@@ -16,7 +16,9 @@ class DatabaseSeeder extends Seeder
             [
                 ClientesSeeder::class,
                 ProdutosSeeder::class,
-                ContatosSeeder::class
+                ContatosSeeder::class,
+                ContratosSeeder::class,
+                ObservacoesSeeder::class,
             ]
         );
     }

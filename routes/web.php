@@ -31,3 +31,10 @@ Route::post('/contatos', 'App\Http\Controllers\ContatoController@store')->name('
 Route::get('/contatos/{id}/editar', 'App\Http\Controllers\ContatoController@edit')->name('contatos.editar');
 Route::put('/contatos/{id}/update', 'App\Http\Controllers\ContatoController@update')->name('contatos.update');
 Route::delete('/contatos/{id}/delete', 'App\Http\Controllers\ContatoController@destroy')->name('contatos.apagar');
+
+Route::get('/observacoes/{contratoId}', 'App\Http\Controllers\ObservacaoController@index')->name('observacoes.index');
+Route::get('/observacoes/{contratoId}/novo', 'App\Http\Controllers\ObservacaoController@create')->name('observacoes.novo');
+Route::post('/observacoes', 'App\Http\Controllers\ObservacaoController@store')->name('observacoes.store');
+Route::get('/observacoes/{id}/editar', 'App\Http\Controllers\ObservacaoController@edit')->name('observacoes.editar');
+Route::put('/observacoes/{id}/update', 'App\Http\Controllers\ObservacaoController@update')->name('observacoes.update');
+Route::delete('/observacoes/{id}/delete', 'App\Http\Controllers\ObservacaoController@destroy')->name('observacoes.apagar');

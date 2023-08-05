@@ -23,6 +23,10 @@ class Observacao extends Model
         return $this->attributes['observacao'];
     }
 
+    public function getInicioObservacao() {
+        return substr($this->attributes['observacao'], 0, 20)." ...";
+    }
+
     public function setObservacao($observacao) {
         $this->attributes['observacao'] =  $observacao;
     }
@@ -31,6 +35,10 @@ class Observacao extends Model
         return $this->attributes['prazo'];
     }
 
+    public function getPrazoBR() {
+        return date('d/m/Y', strtotime($this->attributes['prazo']));
+    }
+ 
     public function setPrazo($prazo) {
         $this->attributes['prazo'] = $prazo;
     }
@@ -52,7 +60,7 @@ class Observacao extends Model
     }
 
     public function getContratoId() {
-        return $this->attributes['contratoId'];
+        return $this->attributes['contrato_id'];
     }
     
     public function setContratoId($contratoId) {

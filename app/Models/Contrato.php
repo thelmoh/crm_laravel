@@ -18,6 +18,14 @@ class Contrato extends Model
         $this->attributes['id'] = $id;
     }
 
+    public function getDescricao() {
+        return $this->attributes['descricao'];
+    }
+
+    public function setDescricao($descricao) {
+        $this->attributes['descricao'] = $descricao;
+    }
+
     public function getInicioBR() {
         return date("d/m/Y",strtotime($this->attributes['inicio']));
     }

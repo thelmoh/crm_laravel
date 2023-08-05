@@ -9,6 +9,7 @@
     <thead>
       <tr>
         <th>ID</th>
+        <th>Descrição</th>
         <th>Início</th>
         <th>Status</th>
         <th>Ações</th>
@@ -18,6 +19,7 @@
         @foreach ($viewData['contratos'] as $contrato)
             <tr>
                 <td class="col-1">{{ $contrato->getId() }}</td>
+                <td>{{ $contrato->getDescricao() }}</td>
                 <td>{{ $contrato->getInicioBR() }}</td>
                 <td class="col-1">
                     @if ($contrato->getAtivo())
@@ -34,10 +36,13 @@
                         <form action="{{ route('contratos.apagar', ['id' => $contrato->getId()]) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger btn-sm">
+                            <button type="submit" class="btn btn-danger btn-sm mr-1">
                                 <i class="fa fa-eraser"></i>
                             </button>
                         </form>
+                        <button type="button" class="btn btn-primary btn-sm mr-1">
+                            <a href="{{ route('observacoes.index', ['contratoId' => $contrato->getId()]) }}" class="link-light text-reset"><i class="fa fa-list"></i></a>
+                        </button>
                     </div>
                 </td>
             </tr>

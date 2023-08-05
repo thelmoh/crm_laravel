@@ -7,6 +7,10 @@
     <form class="row g-3" action="{{ route('contratos.store') }}" method="POST">
         @csrf
         <input type="hidden" name="cliente_id" id="cliente_id" value="{{ $viewData['cliente']->getId() }}">
+        <div class="col-md-10">
+            <label for="descricao" class="form-label">Descrição</label>
+            <input type="text" class="form-control" id="descricao" name="descricao">
+        </div>
         <div class="col-md-2">
             <label for="inicio" class="form-label">Início</label>
             <input type="date" class="form-control" id="inicio" name="inicio">
