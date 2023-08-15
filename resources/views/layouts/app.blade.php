@@ -34,7 +34,7 @@
         <div class="info">
             <form id="logout" action="{{ route('logout') }}" method="POST">
               @csrf
-              <a href="javascript:document.getElementById('logout').submit();" class="d-block" title="Sair">Thelmo Severo <i class="fa fa-sign-out-alt ml-5" aria-hidden="true"></i>
+              <a href="javascript:document.getElementById('logout').submit();" class="d-block" title="Sair">Logout <i class="fa fa-sign-out-alt ml-5" aria-hidden="true"></i>
             </form>
           </a>
         </div>
