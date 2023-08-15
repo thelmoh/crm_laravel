@@ -79,10 +79,21 @@
             <!-- Default box -->
             <div class="card mt-4">
               <div class="card-header">
-                <h3 class="card-title">@yield('titulo', 'CRM Zenitech')</h3>
+                <h3 class="card-title">CRM ZENITECH</h3>
               </div>
               <div class="card-body">
-                @yield('conteudo', 'CRM Zenitech')
+                <section class="content">
+                  <div class="error-page">
+                    <div class="error-content">
+                      <h3><i class="fas fa-exclamation-triangle text-danger"></i></h3>
+                      <p>
+                        Usuário Inativo, entre em contato com o administrador.
+                      </p>
+                    </div>
+                    <!-- /.error-content -->
+                  </div>
+                  <!-- /.error-page -->
+                </section>
               </div>
               <!-- /.card-body -->
             </div>
@@ -125,65 +136,8 @@
 @hasSection('javascript')
   @yield('javascript')
 @endif
-
-  @else
-    <div class="wrapper">
-
-        <!-- Main content -->
-        <section class="content">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-12">
-                <!-- Default box -->
-                <div class="card mt-4">
-                  <div class="card-header">
-                    <h3 class="card-title">@yield('titulo', 'CRM Zenitech')</h3>
-                  </div>
-                  <div class="card-body">
-                    @yield('conteudo', 'CRM Zenitech')
-                  </div>
-                  <!-- /.card-body -->
-                </div>
-                <!-- /.card -->
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- /.content -->
-      <!-- /.content-wrapper -->
-    
-      <footer class="main-footer">
-        <div class="float-right d-none d-sm-block">
-          <b>Versão</b> 1.0.0
-        </div>
-        <strong>Copyright &copy;2023 - 2030 <a href="http://zenitech.com.br">Zenitech Informática</a>.</strong>
-      </footer>
-    
-      <!-- Control Sidebar -->
-      <aside class="control-sidebar control-sidebar-dark">
-        <!-- Control sidebar content goes here -->
-      </aside>
-      <!-- /.control-sidebar -->
-    </div>
-    <!-- ./wrapper -->
-    
-    <!-- jQuery -->
-    <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
-    <!-- Bootstrap 4 -->
-    <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <!-- overlayScrollbars -->
-    <script src="{{ asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
-    <!-- AdminLTE App -->
-    <script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-    <script src="{{ asset('plugins/jquery.maskMoney.js') }}"></script>
-    
-    @hasSection('javascript')
-      @yield('javascript')
-    @endif
-    
-  @endauth
+  
+@endauth
 
 
 </body>

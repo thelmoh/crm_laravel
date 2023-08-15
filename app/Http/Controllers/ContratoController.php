@@ -55,7 +55,13 @@ class ContratoController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $viewData = [];
+        $viewData['titulo'] = 'Detalhes do Contrato';
+        $contrato = Contrato::findOrFail($id);
+        $viewData['contrato'] = $contrato;
+        $viewData['cliente'] = $contrato->cliente;
+        $viewData['produtos'] = $contrato->produtos;
+        return view('contratos.show')->with('viewData', $viewData);
     }
 
     /**

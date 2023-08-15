@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
                 ContatosSeeder::class,
                 ContratosSeeder::class,
                 ObservacoesSeeder::class,
+                ProdutosContratosSeeder::class
             ]
         );
     }

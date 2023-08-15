@@ -20,6 +20,7 @@ return new class extends Migration
             $table->integer('quantidade')->default(1);
             $table->decimal('valor',10, 2);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

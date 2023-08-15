@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Produto;
 
 class Contrato extends Model
 {
@@ -84,5 +85,9 @@ class Contrato extends Model
 
     public function observacoes() {
         return $this->hasMany(Observacao::class, 'contrato_id', 'id');
+    }
+
+    public function produtos() {
+        return $this->belongsToMany(Produto::class, 'produtos_contratos', 'contrato_id', 'produto_id')->withPivot(['id','quantidade','valor']);
     }
 }

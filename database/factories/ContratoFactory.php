@@ -21,7 +21,7 @@ class ContratoFactory extends Factory
     {
         return [
             'inicio' => $this->faker->date(),
-            'descricao' => $this->faker->text(),
+            'descricao' => $this->faker->words(4, true),
             'ativo' => true,
             'cliente_id' => Cliente::factory()
         ];

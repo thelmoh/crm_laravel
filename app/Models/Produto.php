@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Contrato;
 
 class Produto extends Model
 {
@@ -66,6 +67,10 @@ class Produto extends Model
     
     public function setDeletedAt($deleted_at) {
         $this->attributes['deleted_at'] = $deleted_at;
+    }
+
+    public function contratos() {
+        return $this->belongsToMany(Contrato::class, 'produtos_contratos', 'produto_id', 'contrato_id')->withPivot(['id','quantidade','valor']);
     }
 
 }
